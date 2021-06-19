@@ -40,8 +40,14 @@ class MiNav extends HTMLElement {
       if (roles.has("Cliente")) {
         html += /* html */
           `<li>
-            <a href=
-              "chat.html">Chat</a>
+            <a href="chat.html">Recomendaciones</a>
+          </li>`;
+      }
+
+      if (roles.has("Cliente")) {
+        html += /* html */
+          `<li>
+            <a href="consulta.html">Consulta libros</a>
           </li>`;
       }
       /* Enlaces para solo
@@ -51,12 +57,10 @@ class MiNav extends HTMLElement {
         "Administrador")) {
         html += /* html */
           `<li>
-            <a href=
-"pasatiempos.html">Pasatiempos</a>
+            <a href="pasatiempos.html">Pasatiempos</a>
           </li>
           <li>
-            <a href=
-      "usuarios.html">Usuarios</a>
+            <a href="usuarios.html">Usuarios</a>
           </li>`;
       }
       this.ul.innerHTML += html;
