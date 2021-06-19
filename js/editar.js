@@ -30,6 +30,99 @@ var tabla=document.getElementById("tabla");
     });
 
 
+    import {
+        getAuth,
+        getFirestore
+      } from "../lib/fabrica.js";
+      import {
+        getString,
+        muestraError
+      } from "../lib/util.js";
+      import {
+        muestraPasatiempos
+      } from "./navegacion.js";
+      import {
+        tieneRol
+      } from "./seguridad.js";
+      
+      const libros =
+        getFirestore().
+          collection("libros");
+      /** @type {HTMLFormElement} */
+      //const forma = document["forma"];
+      getAuth().onAuthStateChanged(
+        protege, muestraError);
+      
+      /** @param {import(
+          "../lib/tiposFire.js").User}
+          usuario */
+      async function protege(usuario) {
+        if (tieneRol(usuario,
+          ["Administrador"])) {
+          forma.addEventListener(
+            "clic", guardar);
+        }
+      }
+      
+      /** @param {Event} evt */
+      async function guardar(evt) {
+        try {
+          evt.preventDefault();
+
+          var autorCapturado= document.getElementById('autor').value;
+          var tituloCapturado= document.getElementById('titulo').value;
+          var editorialCapturado= document.getElementById('editorial').value;
+          var paginasCapturado= document.getElementById('paginas').value;
+          var boton=document.getElementById('boton');     
+          boton.innerHTML='Editar';          
+          /**
+           * @type {
+              import("./tipos.js").
+                      Pasatiempo} */
+          const modelo = {
+            autor: autorCapturado,
+            titulo: tituloCapturado,
+            editorial: editorialCapturado,
+            paginas: paginasCapturado
+          };
+          await daolibro.
+            add(modelo);
+            document.getElementById('autor').value="";
+    document.getElementById('titulo').value="";
+    document.getElementById('editorial').value="";
+    document.getElementById('paginas').value="";
+    boton.innerHTML='guardar libro nuevo';
+    boton.onclick=function(){
+        guardar();
+    }
+        } catch (e) {
+          muestraError(e);
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function editar (id, autor, titulo, editorial, paginas){
     boton=document.getElementById('boton');
@@ -60,14 +153,7 @@ function editar (id, autor, titulo, editorial, paginas){
     .then(() => {
     console.log("Document successfully updated!");
 
-    document.getElementById('autor').value="";
-    document.getElementById('titulo').value="";
-    document.getElementById('editorial').value="";
-    document.getElementById('paginas').value="";
-    boton.innerHTML='guardar libro nuevo';
-    boton.onclick=function(){
-        guardar();
-    }
+    
     })
     .catch((error) => {
     // The document probably doesn't exist.
