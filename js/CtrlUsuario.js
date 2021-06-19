@@ -18,7 +18,7 @@ import {
 import {
   checksRoles,
   guardaUsuario,
-  selectPasatiempos
+  //selectPasatiempos
 } from "./usuarios.js";
 
 const params =
