@@ -53,20 +53,17 @@ class MiNav extends HTMLElement {
       /* Enlaces para solo
        * administradores.
        */
-      //if (roles.has(
-       // "Administrador")) {
-       // html += /* html */
-         // `<li>
-         //   <a href="pasatiempos.html">Pasatiempos</a>
-         // </li>
-         // <li>
-         //   <a href="usuarios.html">Usuarios</a>
-         // </li>`;
+      if (roles.has(
+          "Administrador")) {
+          html += /* html */
+         `<li>
+          <a href="usuarios.html">Usuarios</a>
+          <a href="pasatiempos.html">Pasatiempos</a> 
+          </li>`;
       //}
       this.ul.innerHTML += html;
     }
   }
 }
 
-customElements.define(
-  "mi-nav", MiNav);
+customElements.define( "mi-nav", MiNav);
