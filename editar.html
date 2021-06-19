@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PRUEBA</title>
+<!--LIBRERIAS OBLIGATORIAS-->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+</head>
+
+<body>
+<center><h1>EDITAR O CREAR BIBLIOGRAFÍA</h1></center>
+
+<a href="consulta.html">consultar libros</a>.&nbsp;&nbsp; 
+<a href="editar.html">editar y crear nueva bibliografía</a>. &nbsp;&nbsp;
+<a href="eliminar.html">elimina datos aqui</a>. &nbsp;&nbsp;
+<br>
+<p>Si desea editar algun libro de clic en el boton editar del libro deseado y modifique los datos correspondientes</p> 
+
+<center>
+<br><br><br><table border=4px>
+  <tr>
+    <th>ID</th>
+    <th>Autor</th>
+    <th>Título</th>
+    <th>Editorial</th>
+    <th>Páginas</th>
+  </tr>
+  <tbody id="tabla">
+  <!--<tr>
+    <td>Soleado</td>
+    <td>Mayormente soleado</td>
+    <td>Parcialmente nublado</td>
+  </tr>-->
+  </tbody>
+</table>
+</center>
+
+<br><br><br>
+<p>Si desea Agregar datos del nuevo libro escribalos a continuación.</p>
+
+<center>
+<p>Autor &nbsp;&nbsp;<input type="text" id="autor" placeholder="Escriba el autor aquí"><br></p>
+<p>Titulo&nbsp;&nbsp;<input type="text" id="titulo" placeholder="Escriba el titulo"><br></p>
+<p>Editorial&nbsp;&nbsp;<input type="text" id="editorial" placeholder="Escriba la editorial"><br></p>
+<p>Paginas&nbsp;&nbsp;<input type="number" id="paginas" placeholder="Num paginas"><br></p>
+<button id="boton" onclick="guardar();">guardar libro nuevo</button><br>
+</center>
+
+
+
+
+
+<!--MI LIBRERIA-->
+<script src="js/editar.js"></script>
+</body>
+</html>
+
