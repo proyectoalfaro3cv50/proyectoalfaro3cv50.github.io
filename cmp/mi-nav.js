@@ -60,7 +60,7 @@ class MiNav extends HTMLElement {
           <a href="usuarios.html">Usuarios</a>
           <a href="pasatiempos.html">Pasatiempos</a> 
           </li>`;
-      //}
+      }
       this.ul.innerHTML += html;
     }
   }
