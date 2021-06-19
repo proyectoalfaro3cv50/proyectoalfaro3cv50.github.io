@@ -53,16 +53,16 @@ class MiNav extends HTMLElement {
       /* Enlaces para solo
        * administradores.
        */
-      if (roles.has(
-        "Administrador")) {
-        html += /* html */
-          `<li>
-            <a href="pasatiempos.html">Pasatiempos</a>
-          </li>
-          <li>
-            <a href="usuarios.html">Usuarios</a>
-          </li>`;
-      }
+      //if (roles.has(
+       // "Administrador")) {
+       // html += /* html */
+         // `<li>
+         //   <a href="pasatiempos.html">Pasatiempos</a>
+         // </li>
+         // <li>
+         //   <a href="usuarios.html">Usuarios</a>
+         // </li>`;
+      //}
       this.ul.innerHTML += html;
     }
   }
