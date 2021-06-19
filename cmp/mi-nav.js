@@ -57,8 +57,7 @@ class MiNav extends HTMLElement {
           "Administrador")) {
           html += /* html */
          `<li>
-          <a href="usuarios.html">Usuarios</a>
-          <a href="pasatiempos.html">Pasatiempos</a> 
+         <a href="usuarios.html">Usuarios</a>
           </li>`;
       }
       this.ul.innerHTML += html;
@@ -66,4 +65,5 @@ class MiNav extends HTMLElement {
   }
 }
 
-customElements.define( "mi-nav", MiNav);
+customElements.define(
+  "mi-nav", MiNav);
