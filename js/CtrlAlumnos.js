@@ -95,8 +95,8 @@ function htmlFila(doc) {
     <th>Fecha de publicación</th>
     </tr>
     <tbody>
-    <a href="alumno.html?${parámetros}">  
-    <td>${titulo}</td> </a>
+      
+    <td><a href="alumno.html?${parámetros}">${titulo}</a></td> 
     <td>${autor}</td>
     <td>${paginas}</td>
     <td>${editorial}</td>
