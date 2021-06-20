@@ -13,9 +13,9 @@ import {
   tieneRol
 } from "./seguridad.js";
 
-const daoAlumno =
+const daoLibro =
   getFirestore().
-    collection("Alumno");
+    collection("libros");
 const params =
   new URL(location.href).
     searchParams;
@@ -41,7 +41,7 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoAlumno.
+      await daoLibro.
         doc(id).
         get();
     if (doc.exists) {
@@ -50,10 +50,10 @@ async function busca() {
           import("./tipos.js").
                   Alumno} */
       const data = doc.data();
-      forma.matricula.value = data.matricula;
-      forma.nombre.value = data.nombre || "";
-      forma.telefono.value = data.telefono || "";
-      forma.grupo.value = data.grupo || "";
+      forma.titulo.value = data.titulo;
+      forma.autor.value = data.autor || "";
+      forma.paginas.value = data.paginas || "";
+      forma.editorial.value = data.editorial || "";
       forma.fecha.value = data.fecha || "";
       forma.addEventListener(
         "submit", guarda);
@@ -74,26 +74,24 @@ async function busca() {
 async function guarda(evt) {
   try {
     evt.preventDefault();
-    const formData =
-      new FormData(forma);
-    const matricula = getString(
-        formData, "matricula").trim();  
-    const nombre = getString(formData, "nombre").trim();
-    const telefono = getString(formData, "telefono").trim();
-    const grupo = getString(formData, "grupo").trim();
+    const formData =new FormData(forma);
+    const titulo = getString(formData, "titulo").trim();  
+    const autor = getString(formData, "autor").trim();
+    const paginas = getString(formData, "paginas").trim();
+    const editorial = getString(formData, "editorial").trim();
     const fecha = getString(formData, "fecha").trim();
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
-      matricula, 
-      nombre,
-      telefono,
-      grupo,
+      titulo, 
+      autor,
+      paginas,
+      editorial,
       fecha
     };
-    await daoAlumno.
+    await daoLibro.
       doc(id).
       set(modelo);
     muestraAlumnos();
@@ -106,7 +104,7 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoAlumno.
+      await daoLibro.
         doc(id).
         delete();
       muestraAlumnos();
