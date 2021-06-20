@@ -72,38 +72,19 @@ function htmlFila(doc) {
   const parámetros =
     new URLSearchParams();
   parámetros.append("id", doc.id);
- // return ( /* html */
-   // `<li>
-     // <a class="fila" href=
-  //"alumno.html?${parámetros}">
-    //    <strong class="primario">
-      //    Título: ${titulo}<br>
-        //  Autor: ${autor} <br>
-         // Páginas: ${paginas} <br>
-         // Editorial: ${editorial}<br>
-         // Fecha de publicación:${dformat}
-       // </strong>
-     // </a>
-   // </li>`);
-   return(
-    `<center><table WIDTH="50%" border=4px>
-    <tr>
-  	<th>Título</th>
-    <th>Autor</th>
-    <th>Páginas</th>
-    <th>Editorial</th>
-    <th>Fecha de publicación</th>
-    </tr>
-    <tbody>
-    <td><a href="alumno.html?${parámetros}">${titulo}</a></td> 
-    <td><a href="alumno.html?${parámetros}">${autor}</a></td>
-    <td><a href="alumno.html?${parámetros}">${paginas}</a></td>
-    <td><a href="alumno.html?${parámetros}">${editorial}</a></td>
-    <td><a href="alumno.html?${parámetros}">${dformat}</a></td> 
-    </tbody>
-    </table></center><br><br>`);
-  
-
+  return ( /* html */
+    `<li>
+      <a class="fila" href=
+  "alumno.html?${parámetros}">
+        <strong class="primario">
+          titulo: ${titulo}<br>
+          Autor: ${autor} <br>
+          Páginas: ${paginas} <br>
+          Editorial: ${editorial}<br>
+          Fecha de publicación:${dformat}
+        </strong>
+      </a>
+    </li>`);
 }
 
 /** @param {Error} e */
@@ -111,4 +92,3 @@ function errConsulta(e) {
   muestraError(e);
   consulta();
 }
-
