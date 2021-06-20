@@ -30,7 +30,7 @@ async function protege(usuario) {
 }
 
 function consulta() {
-  daoLibro.orderBy("autor").onSnapshot(htmlLista, errConsulta);
+  daoLibro.orderBy("titulo").onSnapshot(htmlLista, errConsulta);
 }
 
 /**
