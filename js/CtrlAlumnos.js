@@ -63,6 +63,8 @@ function htmlFila(doc) {
   const data = doc.data();
   const titulo = cod(data.titulo);
   const autor = cod(data.autor);
+  const paginas = cod(data.paginas);
+  const editorial = cod(data.editorial);
   var fsf= cod(data.fecha);
   var fecha = new Date(fsf);
   var espacio="[   -   ]";
@@ -75,7 +77,7 @@ function htmlFila(doc) {
       <a class="fila" href=
   "alumno.html?${parámetros}">
         <strong class="primario">
-          ${titulo} ${autor} ${dformat}
+          ${titulo} ${autor} ${paginas} ${editorial} ${dformat}
         </strong>
       </a>
      
