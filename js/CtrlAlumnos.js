@@ -86,7 +86,7 @@ function htmlFila(doc) {
      // </a>
    // </li>`);
    return(
-    `<center><table border=4px>
+    `<center><table WIDTH="50%" border=4px>
     <tr>
   	<th>Título</th>
     <th>Autor</th>
