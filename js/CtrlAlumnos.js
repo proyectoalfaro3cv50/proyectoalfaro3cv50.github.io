@@ -96,11 +96,11 @@ function htmlFila(doc) {
     </tr>
     <tbody>
       
-    <a href="alumno.html?${parámetros}"><td>${titulo}</td></a> 
-    <td>${autor}</td>
-    <td>${paginas}</td>
-    <td>${editorial}</td>
-    <td>${dformat}</td> 
+    <td><a href="alumno.html?${parámetros}">${titulo}</a></td> 
+    <td><a href="alumno.html?${parámetros}">${autor}</a></td>
+    <td><a href="alumno.html?${parámetros}">${paginas}</a></td>
+    <td><a href="alumno.html?${parámetros}">${editorial}</a></td>
+    <td><a href="alumno.html?${parámetros}">${dformat}</a></td> 
     </tbody>
     </table><br><br>`);
   
