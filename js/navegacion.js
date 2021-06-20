@@ -11,7 +11,7 @@ export function
 
 
 export function
-  muestraAlumnos() {
+  muestraLibros() {
   location.href =
-    "alumnos.html";
+    "libros.html";
 }

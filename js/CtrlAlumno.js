@@ -7,7 +7,7 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraAlumnos
+  muestraLibros
 } from "./navegacion.js";
 import {
   tieneRol
@@ -66,7 +66,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraAlumnos();
+    muestraLibros();
   }
 }
 
@@ -94,7 +94,7 @@ async function guarda(evt) {
     await daoLibro.
       doc(id).
       set(modelo);
-    muestraAlumnos();
+    muestraLibros();
   } catch (e) {
     muestraError(e);
   }
@@ -107,7 +107,7 @@ async function elimina() {
       await daoLibro.
         doc(id).
         delete();
-      muestraAlumnos();
+      muestraLibros();
     }
   } catch (e) {
     muestraError(e);
