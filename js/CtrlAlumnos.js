@@ -72,19 +72,39 @@ function htmlFila(doc) {
   const parámetros =
     new URLSearchParams();
   parámetros.append("id", doc.id);
-  return ( /* html */
-    `<li>
-      <a class="fila" href=
-  "alumno.html?${parámetros}">
-        <strong class="primario">
-          titulo: ${titulo}<br>
-          Autor: ${autor} <br>
-          Páginas: ${paginas} <br>
-          Editorial: ${editorial}<br>
-          Fecha de publicación:${dformat}
-        </strong>
-      </a>
-    </li>`);
+ // return ( /* html */
+   // `<li>
+     // <a class="fila" href=
+  //"alumno.html?${parámetros}">
+    //    <strong class="primario">
+      //    Título: ${titulo}<br>
+        //  Autor: ${autor} <br>
+         // Páginas: ${paginas} <br>
+         // Editorial: ${editorial}<br>
+         // Fecha de publicación:${dformat}
+       // </strong>
+     // </a>
+   // </li>`);
+   return(
+    `<table border=4px>
+    <tr>
+  	<th>Título</th>
+    <th>Autor</th>
+    <th>Páginas</th>
+    <th>Editorial</th>
+    <th>Fecha de publicación</th>
+    </tr>
+    <tbody>
+    <a href="alumno.html?${parámetros}">  
+    <td>${titulo}</td>
+    <td>${autor}</td>
+    <td>${paginas}</td>
+    <td>${editorial}</td>
+    <td>${dformat}</td> </a>
+    </tbody>
+    </table>`);
+  
+
 }
 
 /** @param {Error} e */
