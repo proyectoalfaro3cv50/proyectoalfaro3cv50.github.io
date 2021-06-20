@@ -4,7 +4,7 @@ class MiFooter
     this.innerHTML = /* html */
       `<p>
         &copy; 2021
-        Alfaro Flores Luis Fernando.
+        Alfar Flores Luis Fernando.
       </p>`;
   }
 }
