@@ -86,7 +86,7 @@ function htmlFila(doc) {
      // </a>
    // </li>`);
    return(
-    `<table border=4px>
+    `<center>table border=4px>
     <tr>
   	<th>Título</th>
     <th>Autor</th>
@@ -102,7 +102,7 @@ function htmlFila(doc) {
     <td><a href="alumno.html?${parámetros}">${editorial}</a></td>
     <td><a href="alumno.html?${parámetros}">${dformat}</a></td> 
     </tbody>
-    </table><br><br>`);
+    </table></center><br><br>`);
   
 
 }
