@@ -77,7 +77,7 @@ function htmlFila(doc) {
       <a class="fila" href=
   "alumno.html?${parámetros}">
         <strong class="primario">
-          titulo: ${titulo}<br>
+          Titulo: ${titulo}<br>
           Autor: ${autor} <br>
           Páginas: ${paginas} <br>
           Editorial: ${editorial}<br>
