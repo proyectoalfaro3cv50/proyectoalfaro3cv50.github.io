@@ -47,7 +47,7 @@ class MiNav extends HTMLElement {
       if (roles.has("Cliente")) {
         html += /* html */
           `<li>
-            <a href="libros.html">Consulta libros</a>
+            <a href="libros.html">Consulta datos bibliograficos</a>
           </li>`;
       }
       /* Enlaces para solo
