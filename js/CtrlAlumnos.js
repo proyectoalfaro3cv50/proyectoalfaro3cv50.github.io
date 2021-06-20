@@ -77,10 +77,13 @@ function htmlFila(doc) {
       <a class="fila" href=
   "alumno.html?${parámetros}">
         <strong class="primario">
-          ${titulo} ${autor} ${paginas} ${editorial} ${dformat}
+          titulo: ${titulo}<br>
+          Autor: ${autor} <br>
+          Páginas: ${paginas} <br>
+          Editorial: ${editorial}<br>
+          Fecha de publicación:${dformat}
         </strong>
       </a>
-     
     </li>`);
 }
 
