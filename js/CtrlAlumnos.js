@@ -86,7 +86,7 @@ function htmlFila(doc) {
      // </a>
    // </li>`);
    return(
-    `<center>table border=4px>
+    `<center><table border=4px>
     <tr>
   	<th>Título</th>
     <th>Autor</th>
@@ -95,7 +95,6 @@ function htmlFila(doc) {
     <th>Fecha de publicación</th>
     </tr>
     <tbody>
-      
     <td><a href="alumno.html?${parámetros}">${titulo}</a></td> 
     <td><a href="alumno.html?${parámetros}">${autor}</a></td>
     <td><a href="alumno.html?${parámetros}">${paginas}</a></td>
