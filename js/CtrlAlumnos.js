@@ -102,7 +102,7 @@ function htmlFila(doc) {
     <td>${editorial}</td>
     <td>${dformat}</td> 
     </tbody>
-    </table>`);
+    </table><br><br>`);
   
 
 }
